@@ -1,0 +1,368 @@
+/* mazenbassiouni@gmail.com */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  animation: animate-all 3s ease-in-out;
+}
+body.close {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+@keyframes animate-all {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  padding: 2%;
+  min-width: 900px;
+  min-height: 678px;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: blur(30px);
+}
+.spot {
+  background-image: radial-gradient(
+    circle,
+    rgb(0, 0, 255) 0%,
+    #fff 40%,
+    #fff 30%
+  );
+  height: 40%;
+  width: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 2%;
+  top: -25%;
+}
+
+.showcase {
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.showcase > i {
+  color: #111;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5% 1%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-title {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  text-align: right;
+  margin-left: -15px;
+  margin-top: 27px;
+  transform: rotate(-90deg);
+}
+
+.bar-content {
+  width: 100%;
+  height: 22%;
+  background-color: rgba(0, 0, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.image-content {
+  position: relative;
+  height: 90%;
+  width: 30%;
+  overflow: hidden;
+  margin-bottom: 6%;
+}
+.image-container {
+  height: 100%;
+  width: 700%;
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: -100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img1 {
+  background-image: url(https://source.unsplash.com/random/400x600?man);
+}
+.img2 {
+  background-image: url(https://source.unsplash.com/random/400x601?man);
+}
+.img3 {
+  background-image: url(https://source.unsplash.com/random/400x600?women);
+}
+.img4 {
+  background-image: url(https://source.unsplash.com/random/400x602?man);
+}
+.img5 {
+  background-image: url(https://source.unsplash.com/random/400x603?man);
+}
+
+.text-content {
+  position: relative;
+  width: 45%;
+  height: 44%;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #111;
+  color: #fff;
+}
+.text-container {
+  width: 700%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: -100%;
+}
+
+.text-container > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1%;
+  margin-bottom: 1rem;
+}
+.quotes {
+  font-family: "Secular One", sans-serif;
+  font-size: 4rem;
+  line-height: 1rem;
+  letter-spacing: -25px;
+  margin-left: -20px;
+}
+
+.bar-content > div {
+  width: 12.5%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bar-content .next,
+.bar-content .prev {
+  position: relative;
+}
+.next > div,
+.prev > div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.anime-next.goNext {
+  transform: translateX(100%) scale(1.8, 1.8);
+  transition: all 0.7s ease-in-out;
+}
+.anime-prev.goPrev {
+  transform: translateX(-100%) scale(1.8, 1.8);
+  transition: all 0.7s ease-in-out;
+}
+
+.title-content {
+  color: black;
+  position: absolute;
+  top: 6%;
+  left: 42.5%;
+  height: 22%;
+  width: 30%;
+  font-size: 2.3rem;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+.title-container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title-container {
+  height: 100%;
+  width: 700%;
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: -100%;
+}
+
+.number-content {
+  position: absolute;
+  bottom: 3%;
+  left: 10%;
+  height: 7.4rem;
+  color: #111;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.number-content .index {
+  font-size: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  line-height: 7.4rem;
+  overflow: hidden;
+  height: 100%;
+}
+.number-content .total {
+  margin-left: -8px;
+  font-size: 1.3rem;
+}
+.number-content .index .second {
+  height: 100%;
+  position: relative;
+}
+.true {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 700%;
+  position: absolute;
+  bottom: -100%;
+}
+.true > div {
+  height: 100%;
+}
+
+.text-container.slide-0,
+.image-container.slide-0,
+.title-container.slide-0 {
+  right: 0;
+  transition: all 1s ease-in-out;
+}
+.text-container.slide-2,
+.image-container.slide-2,
+.title-container.slide-2 {
+  right: -200%;
+  transition: all 1s ease-in-out;
+}
+.text-container.slide-3,
+.image-container.slide-3,
+.title-container.slide-3 {
+  right: -300%;
+  transition: all 1s ease-in-out;
+}
+.text-container.slide-4,
+.image-container.slide-4,
+.title-container.slide-4 {
+  right: -400%;
+  transition: all 1s ease-in-out;
+}
+.text-container.slide-5,
+.image-container.slide-5,
+.title-container.slide-5,
+.text-container.last,
+.image-container.last,
+.title-container.last {
+  right: -500%;
+}
+.text-container.slide-5,
+.image-container.slide-5,
+.title-container.slide-5 {
+  transition: all 1s ease-in-out;
+}
+.text-container.slide-6,
+.image-container.slide-6,
+.title-container.slide-6 {
+  right: -600%;
+  transition: all 1s ease-in-out;
+}
+.text-container.animation,
+.image-container.animation,
+.title-container.animation {
+  transition: all 1s ease-in-out;
+}
+
+.true.slide-0 {
+  bottom: 0;
+  transition: all 1s ease-in-out;
+}
+.true.slide-2 {
+  bottom: -200%;
+  transition: all 1s ease-in-out;
+}
+.true.slide-3 {
+  bottom: -300%;
+  transition: all 1s ease-in-out;
+}
+.true.slide-4 {
+  bottom: -400%;
+  transition: all 1s ease-in-out;
+}
+.true.slide-5,
+.true.last {
+  bottom: -500%;
+}
+.true.slide-5 {
+  transition: all 1s ease-in-out;
+}
+.true.slide-6 {
+  bottom: -600%;
+  transition: all 1s ease-in-out;
+}
+.true.animation {
+  transition: all 1s ease-in-out;
+}
+
+/* mazenbassiouni@gmail.com */
